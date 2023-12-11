@@ -1,0 +1,317 @@
+HTML FORMS
+
+An HTML form is used to collect user input. The user input is most often sent to a server for processing.
+
+*******Input Element********
+
+The HTML <input> element is the most used form element.
+
+An <input> element can be displayed in many ways, depending on the type attribute.
+
+Here are some examples:
+
+Type	                    		Description
+<input type="text">	    	Displays a single-line text input field
+<input type="radio">		Displays a radio button (for selecting one of many choices)
+<input type="checkbox">	Displays a checkbox (for selecting zero or more of many choices)
+<input type="submit">		Displays a submit button (for submitting the form)
+<input type="button">		Displays a clickable button
+
+The <label> Element
+The <label> tag defines a label for many form elements.
+The for attribute of the <label> tag should be equal to the id attribute of the <input> element to bind them together.
+
+Example: 
+A form with input fields for text:
+
+<form>
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname">
+</form>
+
+Input type Text
+
+The <input type="text"> defines a single-line input field for text input.
+Example:
+  <input type="text" id="fname" name="fname" placeholder=”Enter your name” required autofocus><br>
+
+
+Input type Radio
+
+The <input type="radio"> defines a radio button.
+Radio buttons let a user select ONE of a limited number of choices.
+Example:-
+
+<p>Choose your favorite Web language:</p>
+
+<form>
+  <input type="radio" id="html" name="fav_language" value="HTML">
+  <label for="html">HTML</label><br>
+  <input type="radio" id="css" name="fav_language" value="CSS">
+  <label for="css">CSS</label><br>
+  <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+  <label for="javascript">JavaScript</label>
+</form>
+
+Input type CheckBox
+
+The <input type="checkbox"> defines a checkbox.
+Checkboxes let a user select ZERO or MORE options of a limited number of choices.
+Example:
+<form>
+  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+  <label for="vehicle1"> I have a bike</label><br>
+  <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+  <label for="vehicle2"> I have a car</label><br>
+  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+  <label for="vehicle3"> I have a boat</label>
+</form>
+
+Input type Submit
+
+The <input type="submit"> defines a button for submitting the form data to a form-handler.
+The form-handler is typically a file on the server with a script for processing input data.
+The form-handler is specified in the form's action attribute.
+Example:
+<form action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+Input Type Password
+<input type="password"> defines a password field:
+Example
+<form>
+  <label for="pwd">Password:</label><br>
+  <input type="password" id="pwd" name="pwd">
+</form>
+
+Input Type Reset
+<input type="reset"> defines a reset button that will reset all form values to their default values:
+Example
+  <input type="reset" value="Reset">
+
+Input Type Color
+The <input type="color"> is used for input fields that should contain a color.
+Depending on browser support, a color picker can show up in the input field.
+Example
+<form>
+  <label for="favcolor">Select your favorite color:</label>
+  <input type="color" id="favcolor" name="favcolor">
+</form>
+
+Input Type Date/DateTime-local
+The <input type="date"> is used for input fields that should contain a date.
+Depending on browser support, a date picker can show up in the input field.The <input type="datetime-local"> specifies a date and time input field, with no time zone.
+Example
+<form>
+  <label for="birthday">Birthday:</label>
+  <input type="date" id="birthday" name="birthday">
+<label for="birthdaytime">Birthday (date and time):</label>
+  <input type="datetime-local" id="birthdaytime" name="birthdaytime">
+</form>
+
+Input Type Email
+The <input type="email"> is used for input fields that should contain an e-mail address.
+Depending on browser support, the e-mail address can be automatically validated when submitted.
+Some smartphones recognize the email type, and add ".com" to the keyboard to match email input.
+Example
+<form>
+  <label for="email">Enter your email:</label>
+  <input type="email" id="email" name="email">
+</form>
+
+Input Type Image
+The <input type="image"> defines an image as a submit button.
+The path to the image is specified in the src attribute.
+Example
+<form>
+<input type="image" src="img_submit.gif" alt="Submit" width="48" height="48">
+</form>
+
+Input Type File
+The <input type="file"> defines a file-select field and a "Browse" button for file uploads.
+Example
+<form>
+  <label for="myfile">Select a file:</label>
+  <input type="file" id="myfile" name="myfile">
+<input type="file" id="files" name="files" multiple>
+</form>
+
+Input Type Hidden
+The <input type="hidden"> defines a hidden input field (not visible to a user).
+A hidden field lets web developers include data that cannot be seen or modified by users when a form is submitted.
+Example
+<form>
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <input type="hidden" id="custId" name="custId" value="3487">
+  <input type="submit" value="Submit">
+</form>
+
+Input Type Number
+The <input type="number"> defines a numeric input field.
+You can also set restrictions on what numbers are accepted.
+The following example displays a numeric input field, where you can enter a value from 1 to 5:
+Example
+<form>
+  <label for="quantity">Quantity (between 1 and 5):</label>
+  <input type="number" id="quantity" name="quantity" min="1" max="5">
+</form>
+
+The value Attribute
+The input value attribute specifies an initial value for an input field:
+Example
+Input fields with initial (default) values:
+<form>
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+<input type="text" id="fname" name="fname" value="John" disabled><br>
+<input type="text" id="fname" name="fname" value="John" readonly><br>
+Note: The size attribute works with the following input types: text, search, tel, url, email, and password. 
+<input type="text" id="pin" name="pin" size="4">
+Note: The maxlength attribute works with the following input types: text.
+  <input type="text" id="pin" name="pin" maxlength="4" size="4">
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The Action Attribute
+The action attribute defines the action to be performed when the form is submitted.
+Usually, the form data is sent to a file on the server when the user clicks on the submit button.
+The Target Attribute
+The target attribute specifies where to display the response that is received after submitting the form.
+The target attribute can have one of the following values:
+Value
+Description
+_blank
+The response is displayed in a new window or tab
+_self
+The response is displayed in the current window
+
+The Method Attribute
+The method attribute specifies the HTTP method to be used when submitting the form data.
+The form-data can be sent as URL variables (with method="get") or as HTTP post transaction (with method="post").
+The default HTTP method when submitting form data is GET. 
+Example:
+<form action="/action_page.php" method="get">
+<form action="/action_page.php" method="post">
+The Novalidate Attribute
+The novalidate attribute is a boolean attribute.
+When present, it specifies that the form-data (input) should not be validated when submitted.
+Example
+A form with a novalidate attribute:
+<form action="/action_page.php" novalidate>
+The Autocomplete Attribute
+The autocomplete attribute specifies whether a form should have autocomplete on or off.
+When autocomplete is on, the browser automatically complete values based on values that the user has entered before.
+Example
+A form with autocomplete on:
+<form action="/action_page.php" autocomplete="on">
+The <select> Element
+The <select> element defines a drop-down list:
+Example
+<label for="cars">Choose a car:</label>
+<select id="cars" name="cars">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="fiat">Fiat</option>
+  <option value="audi">Audi</option>
+</select>
+Visible Values:
+Use the size attribute to specify the number of visible values:
+<select id="cars" name="cars" size="3">
+Allow Multiple Selections:
+Use the multiple attribute to allow the user to select more than one value:
+<select id="cars" name="cars" size="3" multiple>
+The <datalist> Element
+The <datalist> element specifies a list of pre-defined options for an <input> element.
+Users will see a drop-down list of the pre-defined options as they input data.
+The list attribute of the <input> element, must refer to the id attribute of the <datalist> element.
+Example
+<form action="/action_page.php">
+  <input list="browsers">
+  <datalist id="browsers">
+    <option value="Edge">
+    <option value="Firefox">
+    <option value="Chrome">
+    <option value="Opera">
+    <option value="Safari">
+  </datalist>
+</form>
+
+
+The <textarea> Element
+The <textarea> element defines a multi-line input field (a text area):
+Example
+<textarea name="message" rows="10" cols="30">
+The cat was playing in the garden.
+</textarea>
+The <button> Element
+The <button> element defines a clickable button:
+Example
+<button type="button">Click Me!</button>
+The <fieldset> and <legend> Elements
+The <fieldset> element is used to group related data in a form.
+The <legend> element defines a caption for the <fieldset> element.
+Example
+<form action="/action_page.php">
+  <fieldset>
+    <legend>Personalia:</legend>
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="John"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value="Doe"><br><br>
+    <input type="submit" value="Submit">
+  </fieldset>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

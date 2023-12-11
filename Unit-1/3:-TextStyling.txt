@@ -1,0 +1,68 @@
+Text styling:-
+
+In HTML (Hypertext Markup Language), you can apply various text styling attributes to control the appearance of text on your web page. The primary way to apply styling is through the use of CSS (Cascading Style Sheets), either inline within HTML elements or in a separate style sheet. Here are some common ways to style text in HTML:
+
+1. Inline Styles:
+You can use the style attribute directly within HTML tags to apply inline styles. Inline styles only affect the specific element they are applied to.
+
+<p style="color: red; font-size: 18px; font-weight: bold;">This is styled text.</p>
+
+2. CSS Styles in <style> Tag:
+You can define styles in the <style> tag within the <head> section of your HTML document. This allows you to apply styles to multiple elements.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Styling Example</title>
+    <style>
+        p {
+            color: blue;
+            font-size: 16px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <p>This is styled text.</p>
+</body>
+</html>
+
+3. External CSS File:
+You can create an external CSS file (e.g., styles.css) and link it to your HTML document using the <link> tag.
+
+styles.css:
+
+
+p {
+    color: green;
+    font-size: 20px;
+    font-style: italic;
+}
+
+HTML document:
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Styling Example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <p>This is styled text.</p>
+</body>
+</html>
+
+Common Text Styling Properties:
+
+color: Sets the color of the text.
+font-size: Sets the size of the text.
+font-weight: Specifies the thickness of the font characters (e.g., bold).
+font-style: Defines the style of the font (e.g., italic).
+text-align: Aligns the text (e.g., left, center, right).
+text-decoration: Adds decoration to the text (e.g., underline, line-through).
+line-height: Sets the height of a line of text.

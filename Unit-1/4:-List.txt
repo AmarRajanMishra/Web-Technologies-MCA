@@ -1,0 +1,150 @@
+Unordered List:-
+
+In HTML, you can create unordered lists using the <ul> (unordered list) element along with the <li> (list item) element to define each item in the list. Unordered lists are typically used when the order of the items is not significant, and they are usually displayed with bullet points by default.
+
+Here's an example of how to create an unordered list:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unordered List Example</title>
+</head>
+<body>
+
+    <h2>Fruits</h2>
+
+
+    <!-- Unordered List -->
+    <ul>(type=disc(default),circle,square,none)
+        <li>Apple</li>
+        <li>Orange</li>
+        <li>Banana</li>
+        <li>Grapes</li>
+    </ul>
+
+</body>
+</html>
+
+In this example:
+
+The <ul> element defines the unordered list.
+Each list item is represented by the <li> element.
+The rendered output will be a list of fruits with bullet points:
+
+Fruits:
+
+.Apple
+.Orange
+.Banana
+.Grapes
+
+*****************************************************************************************
+
+Ordered List:
+ 
+In HTML, you can create ordered lists using the <ol> (ordered list) element along with the <li> (list item) element to define each item in the list. Ordered lists are used when the order of the items is significant, and they are typically displayed with numbers by default.
+
+Here's an example of how to create an ordered list:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordered List Example</title>
+</head>
+<body>
+
+    <h2>Steps to Make a Sandwich</h2>
+
+    <!-- Ordered List -->
+    <ol>(type:1(default),A,a,i,I)
+        <li>Get bread</li>
+        <li>Spread mayo on the bread</li>
+        <li>Add lettuce and tomatoes</li>
+        <li>Place your choice of protein (e.g., turkey, ham)</li>
+        <li>Top with another slice of bread</li>
+        <li>Cut the sandwich in half</li>
+        <li>Enjoy!</li>
+    </ol>
+
+</body>
+</html>
+
+In this example:
+
+The <ol> element defines the ordered list.
+Each list item is represented by the <li> element.
+The rendered output will be a numbered list of steps:
+
+Steps to Make a Sandwich:
+
+1.Get bread
+2.Spread mayo on the bread
+3.Add lettuce and tomatoes
+4.Place your choice of protein (e.g., turkey, ham)
+5.Top with another slice of bread
+6.Cut the sandwich in half
+7.Enjoy!
+
+*****************************************************************************************
+
+Nested List:
+
+In HTML, you can create nested lists by placing one list (either ordered <ol> or unordered <ul>) within another list item <li>. This allows you to create hierarchical structures in your lists. Here's an example of a nested list:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested List Example</title>
+</head>
+<body>
+
+    <h2>Menu</h2>
+
+    <!-- Outer Ordered List -->
+    <ol>
+        <li>Appetizers</li>
+        <li>Main Courses
+            <!-- Inner Unordered List -->
+            <ul>
+                <li>Chicken Alfredo</li>
+                <li>Vegetarian Pizza</li>
+                <li>Grilled Salmon</li>
+            </ul>
+        </li>
+        <li>Desserts
+            <!-- Inner Unordered List -->
+            <ul>
+                <li>Chocolate Cake</li>
+                <li>Vanilla Ice Cream</li>
+                <li>Fruit Salad</li>
+            </ul>
+        </li>
+    </ol>
+
+</body>
+</html>
+
+In this example:
+
+The outer ordered list <ol> contains three list items <li>.
+The second and third list items contain inner unordered lists <ul>.
+Each inner unordered list has its own list items <li>.
+The rendered output will be a hierarchical menu:
+
+Menu:
+
+1. Appetizers
+2. Main Courses
+   .Chicken Alfredo
+   .Vegetarian Pizza
+   .Grilled Salmon
+3. Desserts
+   .Chocolate Cake
+   .Vanilla Ice Cream
+   .Fruit Salad
